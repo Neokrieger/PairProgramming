@@ -45,9 +45,15 @@ class LetterNumber {
 
 				while (x > 99) x -= 100; 
 
-				if (x.length < 2) x = "0" + x; 
 
-			    this._score += x;
+				if (x < 10) {
+					this._score = this._score + '0' + x;
+				}
+				else {
+					this._score += x;
+                }
+
+			    
 		};
 
 		console.log(this._score);
@@ -56,6 +62,6 @@ class LetterNumber {
 
 }
 
-let ln = new LetterNumber();
+let object = new LetterNumber();
 
-ln.encrypt("Hi, Ed!", 302);
+object.encrypt("Hi, Ed!", 302);
